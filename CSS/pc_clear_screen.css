@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+}
+
+#clearScreen {
+    background-image: url('../asset/bg/clear.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#GameClear {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 60%;
+    pointer-events: none;
+}
+
+.button {
+    display: flex;
+    position: absolute;
+    left: 580px;
+    top: 400px;
+    flex-direction: column;
+    gap: 10px;
+    outline: none;
+    box-shadow: none;
+}
+
+.button button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+    transition: transform 0.1s;
+}
+
+.button button:active {
+    transform: translateY(4px);
+}
+
+.button img {
+    width: 400px;
+}

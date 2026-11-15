@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+}
+
+#gameScreen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../asset/bg/game.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+canvas {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 55%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+
+/*ハンバーガーメニュー*/
+.burger {
+  position: absolute;
+    right: 50px;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.burger button {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.burger button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    border-radius: 10px;
+    display: block;
+}
+
+.burger button:active {
+    transform: translateY(4px);
+}
+
+.burgerMenu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: none;
+    flex-direction: row;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: gray;
+}
+
+.burgerMenu button {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.burgerMenu button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    border-radius: 10px;
+    display: block;
+}
+
+.burgerMenu button:active {
+    transform: translateY(4px);
+}
+
+.back {
+  position: absolute;
+  right: 15%;
+  top: 55%;
+  margin: 0;
+}
+
+.back button {
+  width: 6vw;
+  height: 6vw;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.back button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.back button:active {
+  transform: translateY(4px);
+}
+
+.mButton {
+  position: absolute;
+  right: 20%;
+  top: 58%;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 6vw 9vw 6vw;   /* 左・真ん中・右 */
+  grid-template-rows: 6vw 6vw 6vw;
+  gap: 0;
+  justify-items: center;
+  align-items: center;
+
+  pointer-events: none;
+}
+
+.mButton button {
+  width: 6vw;
+  height: 6vw;          /* 縦横同じ → 正円 */
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0;
+  pointer-events: auto;
+}
+
+.mButton .up    { grid-column: 2; grid-row: 1; }
+.mButton .left  { grid-column: 1; grid-row: 2; }
+.mButton .right { grid-column: 3; grid-row: 2; }
+.mButton .down  { grid-column: 2; grid-row: 3; }
+
+.mButton button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+}
+
+.mButton button:active {
+  transform: translateY(4px);
+}

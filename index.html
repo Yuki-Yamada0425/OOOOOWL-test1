@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>OOOOOWL!!</title>
+
+    <!-- PC_CSS -->
+    <link rel="stylesheet" href="CSS/pc_main.css">
+    <link rel="stylesheet" href="CSS/pc_title_screen.css">
+    <link rel="stylesheet" href="CSS/pc_game_screen.css">
+    <link rel="stylesheet" href="CSS/pc_clear_screen.css">
+    <link rel="stylesheet" href="CSS/pc_menu.css">
+    <link rel="stylesheet" href="CSS/pc_rule.css">
+    <!-- SP_CSS -->
+    <link rel="stylesheet" href="CSS/sp_main.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="CSS/sp_title_screen.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="CSS/sp_game_screen.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="CSS/sp_clear_screen.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="CSS/sp_menu.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="CSS/sp_rule.css" media="(max-width: 600px)">
+
+</head>
+
+<body>
+
+    <!-- pc_title_screen -->
+    <div id="titleScreen" class="scene active">
+
+        <img id="titleLogo" src="asset/ui/title_logo.png">
+
+        <div id="select" class="select">
+            <button onclick="startGame('tutorial')">
+                <img src="asset/ui/tutorial.png">
+            </button>
+
+            <button onclick="startGame('easy')">
+                <img src="asset/ui/easy.png">
+            </button>
+
+            <button onclick="startGame('normal')">
+                <img src="asset/ui/normal.png">
+            </button>
+
+            <button onclick="startGame('hard')">
+                <img src="asset/ui/hard.png">
+            </button>
+        </div>
+        <div id="title_rule" class="title_rule">
+            <button id="title_ruleBtn">
+                <img src="asset/ui/game_rule.png">
+            </button>
+        </div>
+
+        <button id="bgm_button">BGM</button>
+
+    </div>
+
+    <!-- pc_game_screen -->
+    <div id="gameScreen" class="scene">
+
+        <canvas id="canvas" width="900" height="650"></canvas>
+
+        <div class="mButton">
+            <button class="up" onmousedown="startMove(event, 'up')" onmouseup="stopMove()"
+                ontouchstart="startMove(event, 'up')" ontouchend="stopMove()">
+                <img src="asset/ui/up.png">
+            </button>
+
+            <button class="left" onmousedown="startMove(event, 'left')" onmouseup="stopMove()"
+                ontouchstart="startMove(event, 'left')" ontouchend="stopMove()">
+                <img src="asset/ui/left.png">
+            </button>
+
+            <button class="right" onmousedown="startMove(event, 'right')" onmouseup="stopMove()"
+                ontouchstart="startMove(event, 'right')" ontouchend="stopMove()">
+                <img src="asset/ui/right.png">
+            </button>
+
+            <button class="down" onmousedown="startMove(event, 'down')" onmouseup="stopMove()"
+                ontouchstart="startMove(event, 'down')" ontouchend="stopMove()">
+                <img src="asset/ui/down.png">
+            </button>
+        </div>
+        <div class="burger" id="burger">
+            <button id="burgerBtn">
+                <img src="asset/ui/burger.png">
+            </button>
+        </div>
+        <div class="burgerMenu" id="burgerMenu">
+            <button id="game_ruleBtn">
+                <img src="asset/ui/game_rule.png">
+            </button>
+
+            <button id="retryBtn">
+                <img src="asset/ui/game_retry.png">
+            </button>
+
+            <button id="gameTitleBtn">
+                <img src="asset/ui/game_title.png">
+            </button>
+
+            <button id="burger_openBtn">
+                <img src="asset/ui/burger_open.png">
+            </button>
+
+        </div>
+
+        <div class="back">
+            <button id="backBtn">
+                <img src="asset/ui/back.png">
+            </button>
+        </div>
+
+    </div>
+
+    <!-- pc_clear_screen -->
+    <div id="clearScreen" class="scene">
+
+        <img id="GameClear" src="asset/ui/GameClear.png">
+
+        <div class="button">
+            <button id="nextLevelBtn">
+                <img src="asset/ui/NextLevel.png">
+            </button>
+
+            <button id="RetryBtn">
+                <img src="asset/ui/retry.png">
+            </button>
+
+            <button id="TitleBtn">
+                <img src="asset/ui/title.png">
+            </button>
+        </div>
+
+    </div>
+
+    <!-- 外 -->
+    <div id="ruleModal" class="modal hidden">
+        <div class="modalContent">
+            <button id="ruleCloseBtn" class="closeBtn">×</button>
+
+            <div class="ruleSlideshow">
+                <button id="rulePrevBtn" class="ruleNavBtn">◀</button>
+                <img id="ruleImage" src="" alt="ルール説明">
+                <button id="ruleNextBtn" class="ruleNavBtn">▶</button>
+            </div>
+
+            <div id="rulePageIndicator"></div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="JS/map.js"></script>
+    <script src="JS/player.js"></script>
+
+    <script src="JS/ui.js"></script>
+    <script src="JS/effect.js"></script>
+
+    <script src="JS/core.js"></script>
+    <script src="JS/goal.js"></script>
+    <script src="JS/rotate.js"></script>
+    <script src="JS/expansion.js"></script>
+    <script src="JS/rule.js"></script>
+
+    <script src="JS/title_screen.js"></script>
+    <script src="JS/game_screen.js"></script>
+    <script src="JS/clear_screen.js"></script>
+
+    <script src="JS/main.js"></script>
+
+</body>
+
+</html>

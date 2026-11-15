@@ -1,0 +1,30 @@
+#titleScreen {
+    background-size: cover;
+    background-position: right center;
+}
+
+#titleLogo {
+    max-width: 400px;
+    width: 80vw;
+}
+
+.select {
+    top: 320px;
+    width: 80vw;
+    max-width: 400px;
+    gap: 30px; 
+}
+
+.select button {
+    width: 80vw;
+    max-width: 100%;
+}
+
+.select img {
+    width: 80vw;
+    max-width: 100%;
+}
+
+.title_rule button {
+    width: 100px;
+}

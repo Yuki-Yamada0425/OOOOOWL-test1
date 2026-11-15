@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+}
+
+#titleScreen {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../asset/bg/title.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#titleLogo {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    max-width: 60%;
+    pointer-events: none;
+}
+
+
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
+    width: 25vw;
+    gap: 0.6vw;
+}
+
+.select button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+
+    transition: transform 0.1s;
+}
+
+.select button:active {
+    transform: translateY(4px);
+}
+
+
+.select img {
+    width: 100%;
+    display: block;
+}
+
+.title_rule {
+    position: absolute;
+    top: 0px;
+    right: 2vw;
+}
+
+.title_rule button {
+    width: 10vw;
+    max-width: 200px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.title_rule button img {
+    display: block;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.title_rule button:active {
+    transform: translateY(4px);
+}
